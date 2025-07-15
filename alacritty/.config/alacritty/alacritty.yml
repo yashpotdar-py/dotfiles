@@ -1,0 +1,29 @@
+font:
+  normal:
+    family: "EB Garamond"
+    style: Regular
+  size: 11
+
+colors:
+  primary:
+    background: '0x0a0a0a'
+    foreground: '0xeaeaea'
+  normal:
+    black:   '0x000000'
+    red:     '0xaa0000'
+    green:   '0x00aa00'
+    yellow:  '0xaa5500'
+    blue:    '0x0000aa'
+    magenta: '0xaa00aa'
+    cyan:    '0x00aaaa'
+    white:   '0xaaaaaa'
+  bright:
+    black:   '0x555555'
+    red:     '0xff5555'
+    green:   '0x55ff55'
+    yellow:  '0xffff55'
+    blue:    '0x5555ff'
+    magenta: '0xff55ff'
+    cyan:    '0x55ffff'
+    white:   '0xffffff'
+

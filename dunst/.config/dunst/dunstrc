@@ -1,0 +1,24 @@
+[global]
+font = FiraCode Nerd Font 10
+frame_color = "#bd93f9"
+separator_color = frame
+background = "#1e1f29"
+foreground = "#f8f8f2"
+timeout = 10
+geometry = "300x5-20+40"
+padding = 16
+horizontal_padding = 20
+frame_width = 3
+corner_radius = 5
+
+[urgency_low]
+timeout = 5
+
+[urgency_normal]
+timeout = 10
+
+[urgency_critical]
+timeout = 0
+background = "#ff5555"
+foreground = "#f8f8f2"
+
