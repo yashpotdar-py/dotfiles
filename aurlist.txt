@@ -1,0 +1,5 @@
+betterlockscreen
+bibata-cursor-theme
+dracula-gtk-theme
+paru
+paru-debug
