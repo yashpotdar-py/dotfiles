@@ -1,0 +1,61 @@
+#!/usr/bin/env python3
+
+import i3ipc
+import re
+
+def main():
+    i3 = i3ipc.Connection()
+    
+    def on_window_focus(i3, event):
+        try:
+            focused = i3.get_tree().find_focused()
+            workspace = focused.workspace()
+            
+            if workspace.layout in ['stacked', 'tabbed']:
+                return
+                
+            # Get all visible windows in workspace
+            windows = [w for w in workspace.leaves() if w.window_class is not None]
+            
+            if len(windows) <= 1:
+                return
+                
+            # Auto-arrange based on window count
+            if len(windows) == 2:
+                i3.command('split h')
+            elif len(windows) >= 3:
+                # Create a nice layout pattern
+                if len(windows) % 2 == 0:
+                    i3.command('split v')
+                else:
+                    i3.command('split h')
+                    
+        except Exception as e:
+            pass
+    
+    def on_window_new(i3, event):
+        try:
+            # Wait a bit for the window to be properly mapped
+            import time
+            time.sleep(0.1)
+            
+            focused = i3.get_tree().find_focused()
+            workspace = focused.workspace()
+            windows = [w for w in workspace.leaves() if w.window_class is not None]
+            
+            # Auto-resize new windows
+            if len(windows) == 2:
+                i3.command('resize set width 50 ppt')
+            elif len(windows) >= 3:
+                i3.command('resize set width 33 ppt')
+                
+        except Exception as e:
+            pass
+    
+    i3.on('window::focus', on_window_focus)
+    i3.on('window::new', on_window_new)
+    
+    i3.main()
+
+if __name__ == '__main__':
+    main()

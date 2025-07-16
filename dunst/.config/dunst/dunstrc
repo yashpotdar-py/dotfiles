@@ -1,24 +1,37 @@
 [global]
-font = FiraCode Nerd Font 10
-frame_color = "#bd93f9"
-separator_color = frame
-background = "#1e1f29"
-foreground = "#f8f8f2"
-timeout = 10
-geometry = "300x5-20+40"
-padding = 16
-horizontal_padding = 20
-frame_width = 3
-corner_radius = 5
+font = Anonymous Pro 11
+frame_color = "#aa0000"      # Blood Red
+separator_color = "#2e2e2e"  # Ash Gray
+background = "#0a0a0a"       # Midnight Black
+foreground = "#eaeaea"       # Moonlit White
+timeout = 8
+geometry = "350x5-20+50"
+padding = 20
+horizontal_padding = 24
+frame_width = 2
+corner_radius = 8
+icon_position = left
+max_icon_size = 48
+progress_bar = true
+progress_bar_height = 8
+progress_bar_frame_width = 1
+progress_bar_min_width = 300
+progress_bar_max_width = 300
 
 [urgency_low]
-timeout = 5
+timeout = 6
+background = "#0a0a0a"       # Midnight Black
+foreground = "#666666"       # Tombstone Gray
+frame_color = "#2e2e2e"      # Ash Gray
 
 [urgency_normal]
-timeout = 10
+timeout = 8
+background = "#0a0a0a"       # Midnight Black
+foreground = "#eaeaea"       # Moonlit White
+frame_color = "#aa0000"      # Blood Red
 
 [urgency_critical]
 timeout = 0
-background = "#ff5555"
-foreground = "#f8f8f2"
-
+background = "#aa0000"       # Blood Red
+foreground = "#eaeaea"       # Moonlit White
+frame_color = "#ff5555"      # Crimson Echo
