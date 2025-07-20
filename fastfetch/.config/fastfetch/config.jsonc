@@ -1,139 +1,66 @@
 {
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
-    "type": "builtin",
-    "source": "arch_small",
+    "source": "~/.config/fastfetch/bloodborne.txt",
+    "printRemaining": true,
     "color": {
-      "1": "31",
-      "2": "91"
-    },
-    "padding": {
-      "top": 1,
-      "left": 2
+      "1": "red",
+      "2": "red",
+      "3": "black",
+      "4": "bright_white",
+      "5": "yellow",
+      "6": "magenta",
+      "7": "cyan"
     }
   },
   "display": {
-    "separator": " ⚜ ",
+    "separator": " ➤ ",
     "color": {
-      "keys": "31",
-      "title": "91",
-      "separator": "31",
-      "output": "37"
-    }
+      "separator": "red",
+      "title": "white",
+      "output": "white"
+    },
+    "brightColor": true
   },
   "modules": [
     {
-      "type": "custom",
-      "format": "┌─────────────────────────────────────────────┐"
-    },
-    {
-      "type": "custom",
-      "format": "│          🩸 HUNTER'S WORKSHOP 🗡             │"
-    },
-    {
-      "type": "custom",
-      "format": "└─────────────────────────────────────────────┘"
-    },
-    {
-      "type": "break"
-    },
-    {
       "type": "title",
-      "format": "🏴‍☠️ {user-name}@{host-name}"
-    },
-    {
-      "type": "separator",
-      "string": "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+      "format": "🩸 {user-name-colored}@{host-name-colored} 🩸",
+      "color": {
+        "user": "red",
+        "at": "white",
+        "host": "red"
+      }
     },
     {
       "type": "os",
-      "key": "🌙 OS"
-    },
-    {
-      "type": "host",
-      "key": "🏰 Host"
+      "key": "OS",
+      "keyColor": "red"
     },
     {
       "type": "kernel",
-      "key": "⚔️ Kernel"
-    },
-    {
-      "type": "uptime",
-      "key": "🕰️ Uptime"
-    },
-    {
-      "type": "packages",
-      "key": "📦 Packages"
+      "key": "Kernel",
+      "keyColor": "magenta"
     },
     {
       "type": "shell",
-      "key": "🐚 Shell"
-    },
-    {
-      "type": "wm",
-      "key": "🪟 WM"
-    },
-    {
-      "type": "terminal",
-      "key": "💀 Terminal"
-    },
-    {
-      "type": "break"
-    },
-    {
-      "type": "custom",
-      "format": "┌─────────────────────────────────────────────┐"
-    },
-    {
-      "type": "custom",
-      "format": "│             ⚗️ BLOOD VIALS ⚗️                 │"
-    },
-    {
-      "type": "custom",
-      "format": "└─────────────────────────────────────────────┘"
+      "key": "Shell",
+      "keyColor": "white"
     },
     {
       "type": "cpu",
-      "key": "🧠 CPU"
-    },
-    {
-      "type": "gpu",
-      "key": "🎮 GPU"
+      "key": "CPU",
+      "keyColor": "magenta"
     },
     {
       "type": "memory",
-      "key": "🩸 Memory"
-    },
-    {
-      "type": "disk",
-      "key": "💿 Disk"
-    },
-    {
-      "type": "break"
-    },
-    {
-      "type": "custom",
-      "format": "┌─────────────────────────────────────────────┐"
-    },
-    {
-      "type": "custom",
-      "format": "│              🎨 BLOOD ECHOES 🎨             │"
-    },
-    {
-      "type": "custom",
-      "format": "└─────────────────────────────────────────────┘"
+      "key": "Memory",
+      "keyColor": "cyan"
     },
     {
       "type": "colors",
-      "symbol": "██",
-      "paddingLeft": 2
-    },
-    {
-      "type": "break"
-    },
-    {
-      "type": "custom",
-      "format": "       🌙 May the good blood guide your way 🩸"
+      "paddingLeft": 4,
+      "symbol": "circle"
     }
   ]
 }
