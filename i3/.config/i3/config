@@ -70,13 +70,15 @@ exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/bloodborne.jpg
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
+# Set screen blanking and power saving timers
+exec_always --no-startup-id xset s 1800 1800 dpms 2700 2700 2700
 
 # Power Profile
 exec --no-startup-id asusctl profile -n Balanced
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dimblur
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -222,7 +224,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Lock Screen
-bindsym $mod+Shift+x exec betterlockscreen -l
+bindsym $mod+Shift+x exec betterlockscreen -l dimblur
 
 # Enhanced resize window with smooth increments
 mode "resize" {
