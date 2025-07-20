@@ -71,6 +71,9 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpapers/bloodborne.jpg
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+# Power Profile
+exec --no-startup-id asusctl profile -n Balanced
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
@@ -264,3 +267,18 @@ exec_always --no-startup-id ~/.config/i3/autostart.sh
 
 # Screenshot GUI (PrintScreen)
 bindsym Print exec flameshot gui
+
+
+# Media Control
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext exec --no-startup-id playerctl next
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+# Keyboard Brightness
+bindsym XF86KbdBrightnessUp exec --no-startup-id asusctl -n
+bindsym XF86KbdBrightnessDown exec --no-startup-id asusctl -p
+# Brightness Keys
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 10%-
+# Custome Buttons
+bindsym XF86Launch4 exec --no-startup-id asusctl profile -n
+bindsym XF86Launch1 exec notify-send "Armoury Crate Button"

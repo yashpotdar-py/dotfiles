@@ -47,7 +47,7 @@ white = "#eaeaea"      # Moonlit White
 
 [window]
 opacity = 0.45
-padding = { x = 15, y = 15 }
+padding = { x = 5, y = 15 }
 decorations = "None"
 startup_mode = "Windowed"
 dynamic_title = true
